@@ -1,0 +1,149 @@
+<div class="container" >
+  <br />
+  <div style="text-align: center">
+    <h4 style="font: italic bold 30px/70px Comic Sans MS, cursive, sans-serif; color: darkslategray;">--Món Ăn Nổi Bật--</h4>
+  </div>
+  <!-- Phần menu -->
+  <div>
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/home">Trang Chủ</a></li>
+              <li class="breadcrumb-item"><a routerLink="/foodfamous">Các Món Ăn Nổi Bật Miền Nam</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Chi tiết món</li>
+          </ol>
+      </nav>
+  </div>
+  <!-- Phần menu -->
+
+
+  <div id="top-item">
+
+      <div class="row">
+          <div class="col">
+
+              <img src="{{famousdata.img}}" class="roundedest shadow p-2 mb-3 bg-white " alt="Cinque Terre" style="width: 35rem; height: 25rem;">
+
+
+          </div>
+          <div class="col">
+              <!-- Tên món ăn được chọn -->
+              <div>
+                  <h2>
+                      {{famousdata.FoodNoiBat_name}}
+                  </h2>
+              </div>
+              <!-- Tên món ăn được chọn -->
+
+              <!-- Giới thiệu sơ lược món ăn -->
+              <div>
+                  <span>
+                      {{famousdata.info}}
+                  </span>
+              </div>
+              <!-- Giới thiệu sơ lược món ăn -->
+
+              <!-- Button Xem video  -->
+              <div>
+                  <a href="https://youtu.be/8nqcdR596V0"><button type="button" style="width: 20rem;" class="btn btn-danger">Xem
+                          Video</button></a>
+                  <!-- Xem bản in -->
+                  <button style="margin: 1rem" type="button" class="btn btn-secondary btn-sm"  routerLink="/detailfamous/{{famousdata.FoodNoiBat_Id}}">
+                      <i class="fa fa-print"></i>Đặt Món</button>
+                  <!-- Bình chọn -->
+                  <button type="button" class="btn badge-secondary">
+                      <i class="fa fa-heart" style="font-size:20px;color:red; margin-right: 0.5em;"></i>Bình chọn
+                      <span class="badge badge-light">4</span>
+                  </button>
+                  <button style="margin-left: 0.5em;" type="button" class="btn btn-secondary"><i class="fab fa-facebook-square fa-spin"
+                          style="margin-right: 0.5em;font-size: 1rem; color: silver"></i> Chia sẽ</button>
+              </div>
+              <!-- Button Xem video  -->
+              <div style="margin: 0.5rem">
+                  <!-- Đánh giá sao -->
+                  <div class="stars float-left">
+                    <form action="">
+
+                    <input class="star star-5" id="star-5" type="radio" name="star" >
+                    <label class="star star-5" for="star-5" ></label>
+                    <input class="star star-4" id="star-4" type="radio" name="star" >
+                    <label class="star star-4" for="star-4" ></label>
+                    <input class="star star-3" id="star-3" type="radio" name="star" >
+                    <label class="star star-3" for="star-3" ></label>
+                    <input class="star star-2" id="star-2" type="radio" name="star" >
+                    <label class="star star-2" for="star-2" ></label>
+                    <input class="star star-1" id="star-1" type="radio" name="star" >
+                    <label class="star star-1" for="star-1" ></label>
+                </form>
+            </div>
+                  <!-- Đánh giá sao -->
+              </div>
+              <div  style="width: 100%;float:left" >
+                <h5> <strong>Giá</strong> : {{famousdata.tongtien}}.000đ</h5>
+                    
+                </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <!-- Phần chi tiết nguyên liệu -->
+          <div class="col-4 roundedest shadow p-2 mb-3 bg-white">
+              <ul>
+                  <h3 style="font: italic bold 30px/70px Comic Sans MS, cursive, sans-serif; color: red;">Nguyên Liệu</h3>
+              </ul>
+
+              <p>{{nguyenlieunb.nguyenlieuNoiBat1}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat2}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat3}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat4}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat5}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat6}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat7}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat8}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat9}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat10}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat11}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat12}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat13}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat14}}</p>
+              <p>{{nguyenlieunb.nguyenlieuNoiBat15}}</p> <br>
+
+              <p>M: muỗng canh - m: muỗng cafe</p>
+
+
+          </div>
+          <!-- Phần chi tiết nguyên liệu -->
+          <!-- Phần Hướng dẫn thực hiện -->
+          <div class="col-8 roundedest shadow p-2 mb-3 bg-white">
+              <h3 style="font: italic bold 20px/60px Comic Sans MS, cursive, sans-serif; color: red;">1. Sơ Chế:</h3>
+              <p>{{famousdata.soche1}}</p>
+              <p>{{famousdata.soche2}}</p>
+              <p>{{famousdata.soche3}}</p>
+              <p>{{famousdata.soche4}}</p>
+              <h3 style="font: italic bold 20px/60px Comic Sans MS, cursive, sans-serif; color: red;">2. Thực Hiện:</h3>
+              <p>{{famousdata.thuchien1}}</p>
+              <p>{{famousdata.thuchien2}}</p>
+              <p>{{famousdata.thuchien3}}</p>
+              <p>{{famousdata.thuchien4}}</p>
+              <p>{{famousdata.thuchien5}}</p>
+              <p>{{famousdata.thuchien6}}</p>
+              <h3 style="font: italic bold 20px/60px Comic Sans MS, cursive, sans-serif; color: red;">3. Cách Dùng:</h3>
+              <p>{{famousdata.cachdung}}</p>
+
+          </div>
+          <!-- Phần Hướng dẫn thực hiện -->
+
+      </div>
+
+  </div>
+  <br />
+  <br />
+  
+  <br />
+  <br />
+
+  <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="/foodfamous">Xem Các Món Khác</button>
+  <!-- (click)="goBack()" -->
+  <br />
+  <br />
+  <br />
+</div>

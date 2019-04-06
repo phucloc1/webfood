@@ -1,0 +1,57 @@
+
+<h5 style="width: 13em; font: italic bold 22px/60px Georgia, serif; color: darkslategrey;">TÌM TÊN MÓN ĂN:</h5>
+<form>
+  <input class="input" type="text" name="filterlist" placeholder="Search.." [(ngModel)]="filterlist" >
+</form>
+
+<div class="container">
+  <hr />
+  <div style="text-align: center">
+    <h4 style="font: italic bold 30px/70px Comic Sans MS, cursive, sans-serif; color: darkslategray;">--TỔNG
+      HỢP CÁC MÓN ĂN MIỀN NAM--</h4>
+  </div>
+
+  <!-- Parent cart -->
+  <div>
+
+
+    <!-- CART -->
+    <div class="shadow p-2 mb-3 " style="float: left;margin: 1.1em;" *ngFor="let each of foods" >
+      <div class="card" style="width: 19.5em; height: 30em; float: left; margin: 0.5em;">
+        <div>
+          <img class="card-img-top" routerLink="/food/{{each.FoodId}}" id="img-cart" src="{{each.img_link}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a routerLink="/food/{{each.FoodId}}">
+                {{each.name_product}} 
+              </a>
+            </h5>
+            <p class="card-text">{{each.info_product | slice : 0: 60 }}...<a routerLink="/food/{{each.FoodId}}">(xem
+                thêm)</a></p>
+          </div>
+        </div>
+        <br />
+
+        <div>
+          <!-- Yêu thích and share -->
+          <i class="fa fa-heart" style="font-size:20px;color:red; margin-right: 0.5em;"></i>
+          <i class="fa fa-share" style="font-size:20px;color:red;  margin-right: 0.5em;"></i>
+          <!-- Yêu thích and share -->
+
+          <!-- Đánh giá sao -->
+            {{each.price}}.000đ 
+          <!-- Đánh giá sao -->
+          
+          <!-- Xem chi tiết -->
+          <a routerLink="/food/{{each.FoodId}}"><i class="fa fa-dedent" style="font-size:20px;color:red; float: right;"></i></a>
+          <!-- Xem chi tiết -->
+
+        </div>  
+      </div>
+    </div>
+    <!-- CART -->
+
+
+
+
+  </div>

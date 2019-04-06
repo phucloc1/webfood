@@ -1,0 +1,99 @@
+<div class="container">
+    <!-- loại phòng -->
+    <div class="card" style="background-color:honeydew">
+      <div class="card-header text-center">
+        <h4>{{datmon.Foodname}}</h4>
+      </div>
+  
+  <!-- thông tin -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6 " >
+        
+                <h2 class="text-center"> Thông tin liên hệ </h2>
+           <hr style="border: 1px solid black">
+            <div class="row" style="margin-top: 20px">
+              <div class="col-sm-6">
+             
+                    <form class="was-validated">
+                        <div class="form-group">
+                      <h5 for="exampleInputEmail1">Email</h5>
+                      <input type="email" class="form-control" name="email" [(ngModel)]="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="form-group">
+                        <h5> Họ tên</h5>
+                        <input type="text" name="name" [(ngModel)]="name" class="form-control" required>
+                       
+                      </div>
+
+                      <div class="form-group">
+                        <h5>Phường</h5>
+                        <input type="phuong" name="phuong" [(ngModel)]="phuong" class="form-control" required >
+      
+                      </div>
+
+
+                      <div class="form-group">
+                          <h5 > Tổng Tiền</h5>
+                         <!-- {{datmon.tongtien}} -->
+                      
+                        </div>
+                      <div class="tongtien "style="width: 100%">
+                          <p style="border:1px solid green;text-align: center;width: 45%;height: 40px;float:left;padding-top:6px" > {{total}}.000đ </p>
+                       <div style="width: 50%;float:right ">
+                          <button class="btn btn-success btn-xs plus " (click)="add(datmon.FoodId)"><i class="fa fa-plus"></i></button>
+                           {{sl}}
+                        <button class="btn btn-danger btn-xs minus " (click)="del(datmon.FoodId)"><i class="fa fa-minus"></i></button>
+                      </div>
+                      </div>
+                
+                 
+               
+                </form>
+              </div>
+              <div class="col-sm-6">
+                  
+                        <form class="was-validated">
+                  <div class="form-group">
+                    <h5>Số điện thoại</h5>
+                    <input type="tel" name="tel" [(ngModel)]="tel" class="form-control" required >
+  
+                  </div>
+                  <div class="form-group">
+                    <h5>Địa chỉ</h5>
+                    <input type="diachi" name="diachi" [(ngModel)]="diachi" class="form-control" required >
+  
+                  </div>
+
+                  <div class="form-group">
+                    <h5>Quận</h5>
+                    <input type="quan" name="quan" [(ngModel)]="quan" class="form-control" required >
+  
+                  </div>
+
+                  <!-- hình ảnh bên phải  -->
+          <!-- <div class="col-sm-6">
+            {{datmon.img}}
+          </div> -->
+                    
+                </form>
+              </div>
+            </div>
+          </div>
+
+         <div  class="col-sm-6">
+            <img src="{{datmon.img}}" class="roundedest shadow p-2 mb-3 bg-white " alt="Cinque Terre" style="width: 30rem; height: 20rem;margin-top:3em;margin-left: 2em">
+         </div>
+          
+        </div>
+        <!-- footer -->
+
+        <hr style=" border:1px solid green">
+        <button type="submit" class="btn btn-primary nut" style="margin: 20px" (click)="Thanhtoan()">Đặt món</button>
+       
+          <a class='btn btn-default' (click)='onBack()' style='width:80px;background-color:gray'>
+            <i class='glyphicon glyphicon-chevron-left' ></i> Back
+          </a>
+       
+      </div>
+    </div>

@@ -1,0 +1,31 @@
+<div style="text-align: center;">
+    <h4 style="font: italic bold 30px/70px Comic Sans MS, cursive, sans-serif; color: darkslategray;">Hình Ảnh Các Món
+        Ăn Nổi Bật
+    </h4>
+    <h5 style="font: italic bold 30px/70px Comic Sans MS, cursive, sans-serif; color:red;"> ALbum </h5>
+
+</div>
+
+
+
+
+<!-- ***** Welcome Area Start ***** -->
+<!-- CART -->
+<div class="shadow p-2 mb-3 " style="float: left;margin: 1.1em; " *ngFor='let each of hinh'>
+        <div class="card" style="width: 19.5em; height: 15.5em; float: left; margin: 0.5em;">
+          <div>
+            <a href="{{each.image}}"><img class="card-img-top" id="img-cart" src="{{each.image}}" alt="Card image cap"></a>
+          </div>
+          <br />
+  
+          <div> 
+            <!-- Yêu thích and share -->
+            <i class="fa fa-heart" style="font-size:20px;color:red; margin-right: 0.5em;"></i>
+            <i class="fa fa-share" style="font-size:20px;color:red;  margin-right: 0.5em;"></i>
+            <!-- Yêu thích and share -->  
+          </div>
+        </div>
+      </div>
+      <!-- CART -->        
+<!-- ***** Welcome Area End ***** -->
+
