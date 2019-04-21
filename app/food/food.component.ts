@@ -66,16 +66,16 @@ private read_product_where_idcatalog='read_product_where_idcatalog.php?';
   
     // this._foodservice.getCatalog().subscribe(f => this.foods = f);
     //this._foodservice.getCatalog().subscribe(f => this.food = f);
-    this._foodservice.getSouthFoodbyidcatalog(1).subscribe(c =>this.doan=c);
+    //this._foodservice.getSouthFoodbyidcatalog(1).subscribe(c =>this.doan=c);
     //this._http.get(this.url +this.read_product_where_idcatalog).subscribe(result =>{console.log(result)});
     
     
-    // if(id!=0){
-    //   this._foodservice.getSouthFoodbyidcatalog(1).subscribe(f => this.foods = f);
-    // }
-    //else{
-    // this._foodservice.getCatalog().subscribe(f => this.foods = f);
-    // }
+    if(id!=0){
+      this._foodservice.getSouthFoodbyidcatalog(1).subscribe(c =>this.doan=c);
+    }
+    else{
+    this._foodservice.getCatalog().subscribe(f => this.doan = f);
+    }
 
     console.log(id);
    
