@@ -10,7 +10,7 @@ import {Router} from '@angular/router'
 export class HeaderComponent implements OnInit {
   food: catalog[];
   product : product;
-  catalog_id:string="";
+  catalog_id:number=null;
   constructor( private _foodservice:FoodService,
     private _route:Router) { 
       // let arr=this.food[0]
@@ -18,7 +18,12 @@ export class HeaderComponent implements OnInit {
     }
 
   ngOnInit() {
-    this._foodservice.getCatalog().subscribe(f => this.food = f);
+    this._foodservice.getCatalog().subscribe(f => 
+      {this.food = f;
+        let arr=this.food[0];
+        this.catalog_id=arr["catalog_id"];
+        console.log(this.catalog_id)
+    });
    
   }
   

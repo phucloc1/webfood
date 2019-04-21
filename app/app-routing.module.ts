@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'food', component: FoodComponent },
   { path: 'fooddetail', component: FoodDetailComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'food/:id', component: FoodDetailComponent },
+  { path: 'food/:id', component: FoodComponent },
   { path: 'fooddetail/:id', component: DatmonComponent },
   { path: 'thongtin', component: ThongtinComponent },
   { path: 'foodfamous', component: FoodFamousComponent },

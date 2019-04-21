@@ -131,8 +131,8 @@ getCatalog(): Observable<catalog[]> {
 //      }
 
 getSouthFoodbyidcatalog(id:number): Observable<catalog> {
-       return this._http.get<catalog>(this.url+this.SouthsideFood+'/'+id)
-  //  return this._http.get<product[]>(this.url+this.SouthsideFood, {responseType: 'json'});
+     //  return this._http.get<catalog>(this.url+this.SouthsideFood+'/'+id)
+       return this._http.get<catalog>(this.url+"read_product_where_idcatalog.php?catalog_id="+id)
        }
 
 

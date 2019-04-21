@@ -18,10 +18,10 @@ private read_product_where_idcatalog='read_product_where_idcatalog.php?';
     private _http :HttpClient) { }
 
 
-  foods: catalog[];
-  food: catalog[];
-  product: product;
-
+  //foods: product[];
+  //food: catalog[];
+  //product: product[];
+  doan=null;
 
   _filterlist: string;
 // srcImg="./assets/img/";
@@ -62,14 +62,24 @@ private read_product_where_idcatalog='read_product_where_idcatalog.php?';
   // }
 
   ngOnInit() {
-    const id = + this._route.snapshot.paramMap.get('catalog_id');
+    const id = + this._route.snapshot.paramMap.get('id');
+  
+    // this._foodservice.getCatalog().subscribe(f => this.foods = f);
+    //this._foodservice.getCatalog().subscribe(f => this.food = f);
+    this._foodservice.getSouthFoodbyidcatalog(1).subscribe(c =>this.doan=c);
+    //this._http.get(this.url +this.read_product_where_idcatalog).subscribe(result =>{console.log(result)});
+    
+    
+    // if(id!=0){
+    //   this._foodservice.getSouthFoodbyidcatalog(1).subscribe(f => this.foods = f);
+    // }
+    //else{
+    // this._foodservice.getCatalog().subscribe(f => this.foods = f);
+    // }
 
-    this._foodservice.getCatalog().subscribe(f => this.foods = f);
-    this._foodservice.getCatalog().subscribe(f => this.food = f);
-    this._foodservice.getSouthFoodbyidcatalog(id).subscribe(c => console.log(c));
-    // this._http.get(this.url +this.read_product_where_idcatalog).subscribe(result =>{console.log(result)})
-    console.log(id)
-   }
+    console.log(id);
+   
+  }
   
 
   ngAfterViewInit(): void {

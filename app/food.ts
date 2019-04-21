@@ -85,6 +85,7 @@ export class catalog {
   id_catalog: number;
   name_catalog: string;
   parent_id: number;
+
 }
 
 export class product {
